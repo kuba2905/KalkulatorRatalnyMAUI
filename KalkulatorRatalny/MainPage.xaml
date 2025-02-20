@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KalkulatorRatalny.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Rata Kredytu"
+               FontSize="Medium"
+               HorizontalOptions="Start" />
+            <Entry Placeholder="Wpisz Rate Kredytu"
+               x:Name="nameEntry"
+               Keyboard="Numeric"
+               Margin="0,0,0,10" />
+
+            <!-- Pole input do liczby miesiecy -->
+            <Label Text="Liczba Miesięcy"
+               FontSize="Medium"
+               HorizontalOptions="Start" />
+            <Entry Placeholder="Wpisz Liczbę miesięcy"
+               x:Name="emailEntry"
+               Keyboard="Numeric"
+               Margin="0,0,0,10" />
+
+            <!-- Pole input do oprocentowania -->
+            <Label Text="Oprocentowanie Kredytu"
+               FontSize="Medium"
+               HorizontalOptions="Start" />
+            <Entry Placeholder="Wpisz Oprocentowanie Kredytu"
+               x:Name="oprocentowanieInput"
+               Keyboard="Numeric"
+               Margin="0,0,0,20" />
+
+            <!-- Pole input do nadpłaty -->
+            <Label Text="Nadpłata Kredytu"
+                FontSize="Medium"
+                HorizontalOptions="Start" />
+            <Entry Placeholder="Wpisz Nadpłate Kredytu"
+                x:Name="nadplataInput"
+                Keyboard="Numeric"
+                Margin="0,0,0,20" />
+
+            <!-- Przycisk do wysyłania harmonogramu  -->
+            <Button Text="Wygeneruj Harmonogram"
+                Clicked="OnLoginClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
