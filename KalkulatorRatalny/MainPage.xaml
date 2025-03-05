@@ -3,49 +3,138 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KalkulatorRatalny.MainPage">
 
-    <ScrollView>
+    <ScrollView 
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        MaximumWidthRequest="620">
+        
         <VerticalStackLayout
             Padding="30,0"
-            Spacing="25">
-            <Label Text="Rata Kredytu"
-               FontSize="Medium"
-               HorizontalOptions="Start" />
-            <Entry Placeholder="Wpisz Rate Kredytu"
-               x:Name="nameEntry"
-               Keyboard="Numeric"
-               Margin="0,0,0,10" />
+            Spacing="20">
 
-            <!-- Pole input do liczby miesiecy -->
-            <Label Text="Liczba Miesięcy"
-               FontSize="Medium"
-               HorizontalOptions="Start" />
-            <Entry Placeholder="Wpisz Liczbę miesięcy"
-               x:Name="emailEntry"
-               Keyboard="Numeric"
-               Margin="0,0,0,10" />
+            <!-- Label z tytulem programu -->
+            
+            <Label
+                x:Name="tytulProgramuLabel"
+                Text="Kalkulator Ratalny"
+                TextColor="DarkSeaGreen"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="32"
+            />
 
-            <!-- Pole input do oprocentowania -->
-            <Label Text="Oprocentowanie Kredytu"
-               FontSize="Medium"
-               HorizontalOptions="Start" />
-            <Entry Placeholder="Wpisz Oprocentowanie Kredytu"
-               x:Name="oprocentowanieInput"
-               Keyboard="Numeric"
-               Margin="0,0,0,20" />
-
-            <!-- Pole input do nadpłaty -->
-            <Label Text="Nadpłata Kredytu"
-                FontSize="Medium"
-                HorizontalOptions="Start" />
-            <Entry Placeholder="Wpisz Nadpłate Kredytu"
-                x:Name="nadplataInput"
+            <!-- Pole tekstowe z kwota kredytu -->
+            
+            <Label
+                x:Name="kwotaKredytuLabel"
+                Text="Kwota kredytu"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Center"
+                FontSize="22"
+            />
+            
+            <Entry
+                x:Name="kwotaKredytuInput"
+                Placeholder="Wprowadź kwotę kredytu..."
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
                 Keyboard="Numeric"
-                Margin="0,0,0,20" />
+                FontSize="18"
+            />
 
-            <!-- Przycisk do wysyłania harmonogramu  -->
-            <Button Text="Wygeneruj Harmonogram"
-                Clicked="OnLoginClicked" />
+            <!-- Pole tekstowe z liczba miesiecy kredytu -->
+            
+            <Label
+                x:Name="liczbaMiesiecyLabel"
+                Text="Liczba miesięcy kredytu"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Center"
+                FontSize="22"
+            />
+
+            <Entry
+                x:Name="liczbaMiesiecyInput"
+                Placeholder="Wprowadź liczbę miesięcy..."
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Keyboard="Numeric"
+                FontSize="18"
+            />
+            
+            <!-- Pole tekstowe z oprocentowaniem roczne kredytu -->
+
+            <Label
+                x:Name="oprocentowanieKredytuLabel"
+                Text="Oprocentowanie kredytu"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Center"
+                FontSize="22"
+            />
+
+            <Entry
+                x:Name="oprocentowanieKredytuInput"
+                Placeholder="Wprowadź oprocentowanie kredytu (roczne)..."
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Keyboard="Numeric"
+                FontSize="18"
+            />
+
+            <!-- Pole wyboru z nadplata kredytu -->
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                <Label
+                    x:Name="czyNadplataKredytuLabel"
+                    Text="Czy chcesz wprowadzić nadpłatę kredytu?"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"
+                    FontSize="22" 
+                />
+                
+                <Switch
+                    x:Name="czyNadplataKredytuSwitch"
+                    OnColor="DarkSeaGreen"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    IsToggled="false"
+                    Toggled="OnNadplataToggled"
+                />
+            </HorizontalStackLayout>
+
+            <!-- Pole tekstowe z nadplata kredytu -->
+            
+            <Label
+                x:Name="nadplataKredytuLabel"
+                Text="Nadpłata kredytu"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="Center"
+                FontSize="22"
+                IsVisible="False"
+            />
+
+            <Entry
+                x:Name="nadplataKredytuInput"
+                Placeholder="Wprowadź nadpłatę kredytu..."
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Keyboard="Numeric"
+                FontSize="18"
+                IsVisible="False"
+            />
+
+            <Button
+                x:Name="wyswietlanieHarmonogramuButton"
+                Text="Wyświetl harmonogram"
+                BackgroundColor="DarkSeaGreen"
+                VerticalOptions="CenterAndExpand"
+                FontAttributes="Bold"
+                FontSize="16"
+            />
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
