@@ -4,12 +4,10 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:KalkulatorRatalny"
-    Shell.FlyoutBehavior="Disabled"
-    Title="KalkulatorRatalny">
+    Title="Kalkulator Ratalny">
 
     <ShellContent
-        Title="Karkrurator Latalny"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+        Route="MainPage"
+    />
 </Shell>
